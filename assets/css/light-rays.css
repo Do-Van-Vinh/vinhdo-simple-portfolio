@@ -1,0 +1,107 @@
+.platform__light-rays {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: var(--size-emitter);
+}
+.light-rays__bottom {
+  position: absolute;
+  bottom: 0;
+  width: 45%;
+  height: 40%;
+  border-bottom-left-radius: 2rem;
+  border-bottom: var(--size-rays) solid var(--color-rays);
+  border-left: var(--size-rays) solid var(--color-rays);
+  filter: drop-shadow(0 0 3px var(--shadow-rays))
+    drop-shadow(0 0 4px var(--shadow-rays));
+  animation: rays-bottom 1s linear forwards;
+  animation-play-state: paused;
+  will-change: clip-path;
+}
+.rays-1 {
+  left: 0;
+}
+.rays-2 {
+  right: 0;
+  transform: rotateY(180deg);
+}
+.light-rays__top {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 40%;
+  border-top-left-radius: 2rem;
+  border-top: var(--size-rays) solid var(--color-rays);
+  border-left: var(--size-rays) solid var(--color-rays);
+  filter: drop-shadow(0 0 3px var(--shadow-rays))
+    drop-shadow(0 0 4px var(--shadow-rays));
+  animation: rays-top 1s linear forwards;
+  animation-play-state: paused;
+  will-change: clip-path;
+}
+.rays-3 {
+  left: 0;
+}
+.rays-4 {
+  right: 0;
+  transform: rotateY(180deg);
+}
+.light-rays__center {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: var(--size-rays);
+  background-color: var(--color-rays);
+  filter: drop-shadow(0 0 3px var(--shadow-rays))
+    drop-shadow(0 0 4px var(--shadow-rays));
+  animation: rays-center 1s linear forwards;
+  animation-play-state: paused;
+  will-change: transform;
+}
+.rays-5 {
+  left: 25%;
+  transform-origin: left;
+}
+.rays-6 {
+  right: 25%;
+  transform-origin: right;
+}
+.light-rays-start {
+  animation-play-state: running;
+}
+@keyframes rays-bottom {
+  0% {
+    clip-path: polygon(100% 0, 120% 120%, 120% 120%, 120% 120%);
+  }
+  50% {
+    clip-path: polygon(100% 0, 120% 120%, -20% 120%, -20% 120%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 120% 120%, -20% 120%, -20% -20%);
+  }
+}
+@keyframes rays-top {
+  0% {
+    clip-path: polygon(100% 100%, -20% 120%, -20% 120%, -20% 120%);
+  }
+  50% {
+    clip-path: polygon(100% 100%, -20% 120%, -20% -20%, -20% -20%);
+  }
+  100% {
+    clip-path: polygon(100% 100%, -20% 120%, -20% -20%, 120% -20%);
+  }
+}
+@keyframes rays-center {
+  0% {
+    transform: scaleX(0);
+  }
+  33% {
+    transform: scaleX(0.6);
+  }
+  66% {
+    transform: scaleX(0.1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

@@ -1,0 +1,21 @@
+:root {
+  --size-emitter: 3rem;
+  --color-emitter: rgb(64, 192, 255);
+  --color-screen: rgba(64, 192, 255, 0.2);
+  --size-rays: 3px;
+  --color-rays: rgb(64, 192, 255);
+  --shadow-rays: rgba(96, 224, 255);
+  --color-bg: rgba(64, 192, 255, 0.2);
+  --color-text: white;
+  --earth-size: 150px;
+  --size-key: 3px;
+  --h2-font-size: 1.5rem;
+  --h2-line-height: 1.8rem;
+  --h3-font-size: 1.2rem;
+  --h3-line-height: 1.5rem;
+  --p-font-size: 1rem;
+  --p-line-height: 1.2rem;
+  --p-1-font-size: 0.8rem;
+  --p-1-line-height: 1rem;
+  --star: rgba(96, 224, 255);
+}

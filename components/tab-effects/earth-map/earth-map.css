@@ -1,0 +1,29 @@
+.earth-map {
+  position: absolute;
+  top: 8rem;
+  right: 22rem;
+  width: var(--earth-size);
+  height: var(--earth-size);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(127, 255, 255, 0.3);
+  box-shadow: inset -40px -20px 60px rgba(0, 0, 0, 0.6),
+    inset 40px 20px 60px rgba(255, 255, 255, 0.15);
+}
+.map {
+  height: 100%;
+  width: 100%;
+  background: url("../../../assets/images/blue-world-map.png") repeat-x;
+  background-size: cover;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 10px cyan);
+  animation: spin 12s linear infinite;
+}
+@keyframes spin {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: calc(92 * var(--earth-size) / 55) 0;
+  }
+}

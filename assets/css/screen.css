@@ -1,0 +1,81 @@
+@import "../../components/tab-effects/tab-effects.css";
+@import "../../components/tab-menu/tab-menu.css";
+@import "../../components/tab-sections/tab-section.css";
+
+.platform__screen {
+  width: 100%;
+  top: 0;
+  bottom: var(--size-emitter);
+  position: absolute;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.reveal-up {
+  animation: screen-reveal-up 2s linear forwards;
+}
+.reveal-down {
+  animation: screen-reveal-down 2s linear forwards;
+}
+.screen--reveal {
+  width: 100%;
+  height: 0.4%;
+  position: absolute;
+  background-color: var(--color-rays);
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 3px var(--shadow-rays), 0 0 4px var(--shadow-rays),
+    0 0 5px var(--shadow-rays);
+  will-change: transform;
+  animation-play-state: paused;
+}
+.screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--color-bg);
+  border-radius: 2rem;
+  clip-path: inset(50% 0 50% 0);
+  animation: screen 1s linear 0.5s forwards;
+  animation-play-state: paused;
+}
+
+.screen-start {
+  animation-play-state: running;
+}
+@keyframes screen-reveal-up {
+  0% {
+    transform: scaleX(0);
+  }
+  25% {
+    transform: scaleX(1);
+  }
+  75% {
+    transform: scaleX(1) translateY(-12500%);
+  }
+  100% {
+    transform: scaleX(0) translateY(-12500%);
+  }
+}
+@keyframes screen-reveal-down {
+  0% {
+    transform: scaleX(0) rotateX(180deg);
+  }
+  25% {
+    transform: scaleX(1) rotateX(180deg);
+  }
+  75% {
+    transform: scaleX(1) rotateX(180deg) translateY(-12500%);
+  }
+  100% {
+    transform: scaleX(0) rotateX(180deg) translateY(-12500%);
+  }
+}
+@keyframes screen {
+  0% {
+    clip-path: inset(50% 0 50% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}

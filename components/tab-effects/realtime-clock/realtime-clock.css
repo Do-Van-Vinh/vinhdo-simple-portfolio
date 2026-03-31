@@ -1,0 +1,33 @@
+.realtime-clock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 200px;
+  aspect-ratio: 2/1;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  color: white;
+  font-size: 1.2rem;
+}
+.time-day {
+  width: 30%;
+  aspect-ratio: 1/1;
+  position: relative;
+  border-radius: 50%;
+  border: var(--size-rays) solid rgb(64, 192, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.real-time {
+  width: 30%;
+  aspect-ratio: 1/1;
+  position: relative;
+  border-radius: 10%;
+  border: var(--size-rays) solid rgb(64, 192, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

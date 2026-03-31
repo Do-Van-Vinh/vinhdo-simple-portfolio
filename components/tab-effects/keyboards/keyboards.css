@@ -1,0 +1,84 @@
+.keyboard {
+  display: flex;
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  gap: 10px;
+}
+.typing_keys,
+.arrow_keys,
+.numpad {
+  font-size: var(--size-key);
+  height: calc(56 * var(--size-key));
+  border: 1px solid var(--color-rays);
+  display: flex;
+  flex-direction: column;
+  padding: var(--font-p);
+  gap: 1em;
+  color: white;
+}
+/* typing */
+.typing,
+.arrow,
+.num {
+  height: 10em;
+  display: flex;
+  /* background-color: yellow; */
+  gap: 1em;
+}
+.btn {
+  height: calc(10 * var(--size-key));
+  width: calc(10 * var(--size-key));
+  border: 1px solid var(--color-rays);
+  display: flex;
+  font-size: calc(3 * var(--size-key));
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border-radius: calc(2 * var(--size-key));
+}
+.back {
+  width: calc(21 * var(--size-key));
+}
+.tab {
+  width: calc(16 * var(--size-key));
+}
+.slace {
+  width: calc(15 * var(--size-key));
+}
+.cap {
+  width: calc(20 * var(--size-key));
+}
+.ent {
+  width: calc(22 * var(--size-key));
+}
+.shift {
+  width: calc(26.5 * var(--size-key));
+}
+.other {
+  width: calc(15 * var(--size-key));
+}
+.space {
+  width: calc(68 * var(--size-key));
+}
+
+.plus {
+  height: calc(21 * var(--size-key));
+}
+.zero {
+  width: calc(21 * var(--size-key));
+}
+.ent-2 {
+  height: calc(21 * var(--size-key));
+}
+
+.arrow_keys,
+.numpad {
+  display: none;
+}
+.arrow-2 {
+  margin-bottom: calc(11 * var(--size-key));
+}
+.arrow-3 {
+  margin-left: calc(11 * var(--size-key));
+}

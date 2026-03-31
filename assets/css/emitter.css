@@ -1,0 +1,186 @@
+.platform__emitter {
+  position: absolute;
+  bottom: 0;
+  height: var(--size-emitter);
+  aspect-ratio: 3/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.emitter {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  /* background-color: rgba(0, 255, 255, 0.2); */
+  border: 2px solid var(--color-emitter);
+  transform-style: preserve-3d;
+  transform: rotateX(72deg);
+  will-change: transform;
+}
+.emitter__signal {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  mask: radial-gradient(
+    #0000 var(--i),
+    var(--color-emitter) var(--i),
+    var(--color-emitter) var(--o),
+    #0000 var(--o)
+  );
+  animation-name: emitter__signal;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.emitter__signal.signal-1 {
+  background: conic-gradient(
+    var(--color-emitter) 0% 15%,
+    #0000 15% 20%,
+
+    var(--color-emitter) 20% 35%,
+    #0000 35% 40%,
+
+    var(--color-emitter) 40% 55%,
+    #0000 55% 60%,
+
+    var(--color-emitter) 60% 75%,
+    #0000 75% 80%,
+
+    var(--color-emitter) 80% 95%,
+    #0000 95% 100%
+  );
+  --i: 60%;
+  --o: 65%;
+  animation-duration: 3s;
+}
+.emitter__signal.signal-2 {
+  background: conic-gradient(
+    var(--color-emitter) 0% 3%,
+    #0000 3% 12%,
+
+    var(--color-emitter) 12% 15%,
+    #0000 15% 20%,
+
+    var(--color-emitter) 20% 23%,
+    #0000 23% 32%,
+
+    var(--color-emitter) 32% 35%,
+    #0000 35% 40%,
+
+    var(--color-emitter) 40% 43%,
+    #0000 43% 52%,
+
+    var(--color-emitter) 52% 55%,
+    #0000 55% 60%,
+
+    var(--color-emitter) 60% 63%,
+    #0000 63% 72%,
+
+    var(--color-emitter) 72% 75%,
+    #0000 75% 80%,
+
+    var(--color-emitter) 80% 83%,
+    #0000 83% 92%,
+
+    var(--color-emitter) 92% 95%,
+    #0000 95% 100%
+  );
+  --i: 56%;
+  --o: 65%;
+  animation-duration: 3s;
+}
+.emitter__signal.signal-3 {
+  background: conic-gradient(var(--color-emitter) 100%);
+  --i: 55%;
+  --o: 56%;
+}
+.emitter__signal.signal-4 {
+  background: conic-gradient(
+    var(--color-emitter) 0% 25%,
+    #0000 25% 50%,
+
+    var(--color-emitter) 50% 75%,
+    #0000 75% 100%
+  );
+  --i: 45%;
+  --o: 50%;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+.emitter__signal.signal-5 {
+  background: conic-gradient(
+    #0000 0% 25%,
+    var(--color-emitter) 25% 50%,
+
+    #0000 50% 75%,
+    var(--color-emitter) 75% 100%
+  );
+  --i: 47%;
+  --o: 48%;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+.emitter__signal.signal-6 {
+  background: conic-gradient(var(--color-emitter) 0% 50%, #0000 50% 100%);
+  --i: 35%;
+  --o: 40%;
+  animation-duration: 2s;
+}
+.emitter__signal.signal-7 {
+  background: conic-gradient(#0000 0% 50%, var(--color-emitter) 50% 100%);
+  --i: 37%;
+  --o: 38%;
+  animation-duration: 2s;
+}
+.emitter__signal.signal-8 {
+  background: conic-gradient(var(--color-emitter) 0% 70%, #0000 70% 100%);
+  --i: 27%;
+  --o: 30%;
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+.emitter__signal.signal-9 {
+  background: conic-gradient(
+    var(--color-emitter) 0% 15%,
+    #0000 15% 60%,
+    var(--color-emitter) 60% 100%
+  );
+  --i: 24%;
+  --o: 27%;
+  animation-duration: 2s;
+}
+@keyframes emitter__signal {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.emitter__wave {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 5px solid var(--color-emitter);
+  transform: scale(0.3);
+  animation: emitter__wave 1.5s ease-out infinite;
+  will-change: transform, opacity;
+}
+.emitter__wave.wave-2 {
+  animation-delay: 0.5s;
+}
+.emitter__wave.wave-3 {
+  animation-delay: 1s;
+}
+@keyframes emitter__wave {
+  from {
+    opacity: 1;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8) translateZ(calc(var(--size-emitter) / 2));
+  }
+}

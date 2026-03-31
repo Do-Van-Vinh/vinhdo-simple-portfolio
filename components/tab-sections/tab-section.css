@@ -1,0 +1,43 @@
+@import "../tab-about/tab-about.css";
+@import "../tab-skill/tab-skill.css";
+@import "../tab-project/tab-project.css";
+.tab-section {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.section__layouts {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg);
+  border: var(--size-rays) solid var(--color-rays);
+  display: none;
+}
+/* .section-show {
+  display: flex;
+} */
+.show_glitch {
+  display: flex;
+  animation: show_glitch 1s linear forwards;
+}
+@keyframes show_glitch {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  30%,
+  100% {
+    opacity: 1;
+  }
+}
